@@ -68,32 +68,50 @@ h1 {
 }
 
 /* Beams */
+/* --- BEAM SETTINGS --- */
+
 #beamLeft {
   position: absolute;
-  height: 20px; /* Thickness of beam */
-  background: red; /* Replace with: url('red-beam.png') repeat-x */
-  box-shadow: 0 0 10px red; /* Glow effect */
+  height: 20px; 
+  /* Use the red beam image */
+  background-image: url('red-beam.png');
+  background-repeat: repeat-x;
+  background-position: center left;
+  background-size: contain; 
   
-  /* Anchor to Left Character */
-  left: 80px;  /* Adjust this to match where the wand tip is */
-  top: 65px;   /* Adjust to vertical center of wand */
-  width: 0px;  /* JS will control this */
+  /* ALIGNMENT FOR PLAYER (Left) */
+  /* The player sprite is 100px tall. The wand is roughly 60% down. */
+  top: 60px;   
+  /* The player starts at 10px left. The wand tip is roughly 70px wide. */
+  left: 80px;  
+  
+  width: 0px; 
   z-index: 5;
-  transform-origin: left center;
+  
+  /* Optional: Keep the glow if you want extra bloom, remove if it looks messy */
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
 }
 
 #beamRight {
   position: absolute;
   height: 20px;
-  background: green; /* Replace with: url('green-beam.png') repeat-x */
-  box-shadow: 0 0 10px green; /* Glow effect */
+  /* Use the green beam image */
+  background-image: url('green-beam.png');
+  background-repeat: repeat-x;
+  background-position: center right;
+  background-size: contain;
+
+  /* ALIGNMENT FOR COMPUTER (Right) */
+  /* The computer sprite is 100px tall. The wand is higher up, around 45% down. */
+  top: 50px;
+  /* The computer starts at 10px from right. Wand tip extends inward. */
+  right: 80px; 
   
-  /* Anchor to Right Character */
-  right: 80px; /* Adjust this to match where the wand tip is */
-  top: 65px;
-  width: 0px;  /* JS will control this */
+  width: 0px; 
   z-index: 5;
-  transform-origin: right center;
+  
+  /* Optional: Green glow */
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
 }
 
 /* The Clash Explosion */
