@@ -284,32 +284,74 @@ const HARRY_POTTER_WORDS = [
   function endGame(message) {
     gameOver = true;
     result.textContent = message;
+
+    // Stop the computer
     clearInterval(computerInterval);
-    setTimeout(() => {
-      menu.style.display = "block";
-      gameContainer.style.display = "none";
+
+    // Hide typing elements
+    wordsRow.style.display = "none";
+    input.style.display = "none";
+
+    // Optionally hide battlefield beams/clash
+    beamLeft.classList.add("hidden-during-countdown");
+    beamRight.classList.add("hidden-during-countdown");
+    clashPoint.classList.add("hidden-during-countdown");
+
+    // Show end buttons
+    const endButtons = document.getElementById("endButtons");
+    endButtons.style.display = "flex"; // use flex for nicer spacing
+    endButtons.style.justifyContent = "center";
+    endButtons.style.marginTop = "30px";
+
+    // Play Again button
+    const playAgainBtn = document.getElementById("playAgainBtn");
+    playAgainBtn.onclick = () => {
+      endButtons.style.display = "none";
       result.textContent = "";
-    }, 1500);
+
+      // Show battlefield beams/clash again
+      beamLeft.classList.remove("hidden-during-countdown");
+      beamRight.classList.remove("hidden-during-countdown");
+      clashPoint.classList.remove("hidden-during-countdown");
+
+      resetGame(); // restart game with same settings
+      input.focus();
+    };
+
+    // Main Menu button
+    const mainMenuBtn = document.getElementById("mainMenuBtn");
+    mainMenuBtn.onclick = () => {
+      endButtons.style.display = "none";
+      gameContainer.style.display = "none";
+      menu.style.display = "block";
+      result.textContent = "";
+
+      // Show battlefield beams/clash again for next game
+      beamLeft.classList.remove("hidden-during-countdown");
+      beamRight.classList.remove("hidden-during-countdown");
+      clashPoint.classList.remove("hidden-during-countdown");
+    };
   }
 
+  // --- Countdown function ---
   function startCountdown(callback) {
     const countdownEl = document.getElementById("countdown");
-    countdownEl.style.display = "block";
-    let count = 3;
-
+    countdownEl.style.display = "block"; // show countdown
+    let count = 3; // start from 3
     countdownEl.textContent = count;
 
-   const interval = setInterval(() => {
+    const interval = setInterval(() => {
       count--;
       if (count > 0) {
         countdownEl.textContent = count;
       } else {
         clearInterval(interval);
-        countdownEl.style.display = "none";
-        if (callback) callback();
+        countdownEl.style.display = "none"; // hide countdown
+        if (callback) callback(); // start the game
       }
-    }, 1000);
+    }, 1000); // 1 second per number
   }
+
   // --- Start button ---
   startBtn.addEventListener("click", () => {
     currentDifficulty = document.querySelector('input[name="difficulty"]:checked').value;
