@@ -237,7 +237,7 @@ p.wordset {
   border-color: #FFD700 transparent transparent transparent;
 }
 
-/*make the tooltip appear when hover on wordset options*/
+/*make the tooltip appear when hover on word*/
 .tooltip:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
@@ -288,7 +288,6 @@ button::after {
 button:hover::after {
   opacity: 1;
   filter: blur(18px);
-  animation: pulseGlow 1.2s infinite alternate;
 }
 
 /*Start button customizer*/
@@ -369,6 +368,10 @@ button:hover::after {
   z-index: 3;
 }
 
+/* Hide characters during countdown and winning/losing screen */
+.hidden {
+  display: none;
+}
 
 /* Explosion, animation that happens when a spell touches a character, so when a game ends */
 .explosion {
@@ -568,18 +571,6 @@ button:hover::after {
   opacity: 0.9;             /* Makes it look slightly different */
   color: #FFD700;           /* Gives the WPM a gold color to match your theme */
   margin-top: 10px;
-}
-
-
-
-/* Add this animation definition at the bottom of your CSS if you don't have it */
-@keyframes pulse {
-  from { transform: translateX(-50%) scale(1); }
-  to { transform: translateX(-50%) scale(1.2); }
-}
-
-.hidden-during-countdown {
-  display: none !important;
 }
 
 #end-buttons {
