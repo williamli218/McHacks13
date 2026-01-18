@@ -114,27 +114,26 @@ This makes the logic easier to reason about and modify.
 
 ## 8. File Structure
 
+```
 .
-├── index.html # Main HTML entry point
-├── style.css # All styles and animations
-├── script.js # Game logic and computer behavior
-├── images/
-│ ├── background3.mp4
-│ ├── battlefield.png
-│ ├── computer_no_spell.gif
-│ ├── computer.gif
-│ ├── explosion.gif
-│ ├── green_beam.png
-│ ├── player_no_spell.gif
-│ ├── player.gif
-│ ├── red_beam.gif
-│ ├── win_comoputer.gif
-│ └── win_player.gif
-├── HARRYP__.TTF
+├── index.html        # Main HTML entry point
+├── style.css         # All styles and animations
+├── script.js         # Game logic and computer behavior
+├── images/           # Game assets
+│   ├── background3.mp4
+│   ├── battlefield.png
+│   ├── computer_no_spell.gif
+│   ├── computer.gif
+│   ├── explosion.gif
+│   ├── green_beam.png
+│   ├── player_no_spell.gif
+│   ├── player.gif
+│   ├── red_beam.gif
+│   ├── win_computer.gif
+│   └── win_player.gif
+├── HARRYP__.TTF      # Custom font
 └── README.md
-
-
----
+```
 
 ## 9. Running the Game
 
