@@ -103,6 +103,9 @@ Transitions between menus, countdowns, gameplay, and the end screen
 are intentionally paced. The interface avoids clutter and 
 keeps the player’s attention focused on the typing task.
 
+<img width="1919" height="1199" alt="image" src="https://github.com/user-attachments/assets/43f15ca0-7a0b-42c5-a725-eac1b8bea290" />
+
+
 ---
 
 ## 7. Technical Structure
@@ -144,9 +147,19 @@ This makes the logic easier to reason about and modify.
 
 ## 9. Running the Game
 
-No setup or build process is required. Simply open `index.html` in a modern desktop browser. Chrome is recommended to ensure smooth video playback and consistent animation timing.
+The game can be played in two ways.
 
-Because the game relies on keyboard input, it is best experienced on a desktop or laptop rather than on a mobile device.
+### Option 1: Play Online
+The project is hosted using **GitHub Pages** and can be played directly in your browser at:  
+👉 **https://YOUR_USERNAME.github.io/YOUR_REPOSITORY_NAME/**
+
+### Option 2: Run Locally
+1. Clone or download the repository
+2. Open `index.html` in a modern desktop browser
+
+Chrome is recommended to ensure smooth video playback and consistent animation timing.  
+Because the game relies on keyboard input, it is best experienced on a desktop or laptop.
+
 
 ---
 
