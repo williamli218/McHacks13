@@ -127,7 +127,7 @@ h1 {
   /* So: 91px (beam center) - 65px (half explosion) = 26px */
   top: 40px; 
   
-  left: 350px; /* JS controls this */
+  left: 570px; /* JS controls this */
   transform: translateX(-50%); /* Keeps the image centered on the coordinate */
   
   z-index: 100; /* Ensures it sits on top of the beams */
