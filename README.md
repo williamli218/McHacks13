@@ -151,7 +151,7 @@ The game can be played in two ways.
 
 ### Option 1: Play Online
 The project is hosted using **GitHub Pages** and can be played directly in your browser at:  
-👉 **https://YOUR_USERNAME.github.io/YOUR_REPOSITORY_NAME/**
+👉 **(https://frederic-yao.github.io/The-Type-Casting-Duel/)**
 
 ### Option 2: Run Locally
 1. Clone or download the repository
