@@ -173,6 +173,76 @@ p.wordset {
   0 0 20px rgba(255, 215, 0, 0.8)
 }
 
+/* --- Tooltip Styles --- */
+/*tooltip container, giving describing to the wordset options*/
+.tooltip {
+  position: relative;
+  cursor: help;
+}
+
+/*tool tip fonts and styling*/
+.tooltip-text {
+  visibility: hidden;
+  width: 220px;
+  background: rgba(15, 15, 15, 0.95); /* Nearly black, slightly transparent */
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #FFD700;
+  border-radius: 4px;
+
+  box-shadow:
+    0 0 15px rgba(0,0,0,0.9),       
+    0 0 10px rgba(255, 215, 0, 0.4),
+    inset 0 0 15px rgba(255, 215, 0, 0.1);
+  
+  font-family: "HarryP", serif;
+  font-size: 22px;
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 1.2;
+
+  position: absolute;
+  bottom: 135%;
+  left: -13%;
+  margin-left: 0px;
+  transform: translateX(-50%);
+  z-index: 1001;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  background-image: 
+    linear-gradient(to right, #FFD700 20px, transparent 20px),
+    linear-gradient(to bottom, #FFD700 20px, transparent 20px),
+    linear-gradient(to left, #FFD700 20px, transparent 20px),  
+    linear-gradient(to bottom, #FFD700 20px, transparent 20px),
+    linear-gradient(to right, #FFD700 20px, transparent 20px),
+    linear-gradient(to top, #FFD700 20px, transparent 20px),
+    linear-gradient(to left, #FFD700 20px, transparent 20px),
+    linear-gradient(to top, #FFD700 20px, transparent 20px);
+  background-repeat: no-repeat;
+  background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-position: 0 0, 0 0, 100% 0, 100% 0, 0 100%, 0 100%, 100% 100%, 100% 100%;
+}
+
+/*more styling to the tooltip*/
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #FFD700 transparent transparent transparent;
+}
+
+/*make the tooltip appear when hover on wordset options*/
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY();
+}
 
 /*creating extra element/styling after the titles*/
 p.difficulty::after, p.wordset::after {
@@ -465,14 +535,14 @@ button:hover::after {
   animation: blink 1s steps(1) infinite;
 }
 
-/**/
+/*cursor effect of blinking*/
 @keyframes blink {
   50% {
     opacity: 0;
   }
 }
 
-/* --- Result Text --- */
+/* --- Result Text, computer wins or player wins --- */
 #result {
   font-size: 80px;           /* Slightly smaller to fit the screen better */
   font-weight: bold;
@@ -500,71 +570,7 @@ button:hover::after {
   margin-top: 10px;
 }
 
-.tooltip {
-  position: relative;
-  cursor: help;
-}
 
-.tooltip-text {
-  visibility: hidden;
-  width: 220px;
-  background: rgba(15, 15, 15, 0.95); /* Nearly black, slightly transparent */
-  color: #fff;
-  text-align: center;
-  padding: 12px;
-  border: 1px solid #FFD700;
-  border-radius: 4px;
-
-  box-shadow:
-    0 0 15px rgba(0,0,0,0.9),       
-    0 0 10px rgba(255, 215, 0, 0.4),
-    inset 0 0 15px rgba(255, 215, 0, 0.1);
-  
-  font-family: "HarryP", serif;
-  font-size: 22px;
-  font-style: italic;
-  letter-spacing: 1px;
-  line-height: 1.2;
-
-  position: absolute;
-  bottom: 135%;
-  left: -13%;
-  margin-left: 0px;
-  transform: translateX(-50%);
-  z-index: 1001;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  border: 1px solid rgba(255, 215, 0, 0.3);
-  background-image: 
-    linear-gradient(to right, #FFD700 20px, transparent 20px),
-    linear-gradient(to bottom, #FFD700 20px, transparent 20px),
-    linear-gradient(to left, #FFD700 20px, transparent 20px),  
-    linear-gradient(to bottom, #FFD700 20px, transparent 20px),
-    linear-gradient(to right, #FFD700 20px, transparent 20px),
-    linear-gradient(to top, #FFD700 20px, transparent 20px),
-    linear-gradient(to left, #FFD700 20px, transparent 20px),
-    linear-gradient(to top, #FFD700 20px, transparent 20px);
-  background-repeat: no-repeat;
-  background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
-  background-position: 0 0, 0 0, 100% 0, 100% 0, 0 100%, 0 100%, 100% 100%, 100% 100%;
-}
-
-.tooltip-text::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -8px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: #FFD700 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(-50%) translateY();
-}
 
 /* Add this animation definition at the bottom of your CSS if you don't have it */
 @keyframes pulse {
