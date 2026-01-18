@@ -352,10 +352,10 @@ button:hover::after {
 }
 
 /* --- Game Container --- */
-#gameContainer {
+#game-container {
   width: 95%;
   max-width: 1200px;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; /* so it doesn’t center based on text */

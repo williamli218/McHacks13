@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const result = document.getElementById("result");
   const menu = document.getElementById("menu");
   const startBtn = document.getElementById("start-btn");
-  const gameContainer = document.getElementById("gameContainer");
+  const gameContainer = document.getElementById("game-container");
   const wordsRow = document.getElementById("wordsRow");
 
   const beamLeft = document.getElementById("beamLeft");
@@ -47,9 +47,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const PLAYER_PULL = 30; // pixels per correct word
   const DIFFICULTY_SETTINGS = {
-    easy: { speed: 600, computerPull: 10 },
-    hard: { speed: 300, computerPull: 20 }
+    easy:   { speed: 600, computerPull: 5 },
+    medium: { speed: 450, computerPull: 10 },
+    hard:   { speed: 300, computerPull: 20 }
   };
+
 
   // --- Word banks ---
   const NORMAL_WORDS = [
