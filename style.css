@@ -3,14 +3,18 @@
     src: url("harry_p/HARRYP__.ttf") format("truetype");
 }
 
+
+/*Harry Potter style font*/
 body, button {
   font-family: "HarryP", Arial, sans-serif;
 }
 
+/*Used font to display text and type*/
 #currentWord, #upcomingWords, #typing-input {
     font-family: Arial, sans-serif; /* fallback / readable font */
 }
 
+/*add text shadow*/
 body, h1, h2, h3, p, label {
   color: #fff;
   text-shadow:
@@ -19,6 +23,7 @@ body, h1, h2, h3, p, label {
     0 0 20px rgba(0,0,0,0.6);
 }
 
+/*Display settings of the whole page*/
 body {
   margin: 0;
   height: 100vh;
@@ -34,6 +39,7 @@ body {
   justify-content: center;
 }
 
+/*Customize title Type Casting War*/
 h1 {
   position: fixed;
   top: 0;
@@ -57,10 +63,7 @@ h1 {
   z-index: 1000;
 }
 
-.option input[type="radio"] {
-  display: none;
-}
-
+/*Display different difficulties*/
 .option span {
   display: inline-block;
   margin: 10px 20px;
