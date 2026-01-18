@@ -103,7 +103,7 @@ Transitions between menus, countdowns, gameplay, and the end screen
 are intentionally paced. The interface avoids clutter and 
 keeps the player’s attention focused on the typing task.
 
-<img width="1919" height="1199" alt="image" src="https://github.com/user-attachments/assets/43f15ca0-7a0b-42c5-a725-eac1b8bea290" />
+![In-Game Image 3](images/readme_image_3.png)
 
 
 ---
