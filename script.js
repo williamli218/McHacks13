@@ -235,8 +235,8 @@ const HARRY_POTTER_WORDS = [
     ropePosition = Math.max(0, Math.min(650, ropePosition));
     updateVisuals();
 
-    if (ropePosition === 0) endGame("Computer wins!");
-    if (ropePosition === 650) endGame("You win!");
+    if (ropePosition <= 130) endGame("Computer wins!");
+    if (ropePosition >= 600 ) endGame("You win!");
   }
 
   function updateVisuals() {
