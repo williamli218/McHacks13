@@ -177,6 +177,11 @@ Potential future improvements:
 - Additional game modes
 - Sound effects and music controls
 - Mobile-friendly input handling
+- More characters and battlefields
+- Type quotes from the book instead of single words
+- Words combo (streak, score)
+- Voicelines to characters
+- Accuracy rate
 
 ---
 
