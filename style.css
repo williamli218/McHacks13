@@ -246,6 +246,25 @@ button:hover::after {
   z-index: 3;
 }
 
+#charLeftNoSpell {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  height: 100px; /* Adjust to sprite size */
+  z-index: 3;
+}
+#charRightNoSpell {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  height: 100px; /* Adjust to sprite size */
+  z-index: 3;
+}
+
+.hidden {
+  display: none;
+}
+
 /* Explosion */
 .explosion {
   position: absolute;
