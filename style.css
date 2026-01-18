@@ -456,6 +456,7 @@ button:hover::after {
   
   font-family: "HarryP", serif;
   font-size: 22px;
+  font-style: italic;
   letter-spacing: 1px;
   line-height: 1.2;
 
