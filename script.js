@@ -436,24 +436,21 @@ const HARRY_POTTER_WORDS = [
   initLines();
   const socket = io();
 
+  // Join multiplayer game
+  socket.emit("joinGame");
 
-  socket.on("init", (data) => {
-    ropePosition = data.ropePosition;
+  // When player types a correct word
+  socket.emit("playerMove", 30); // positive moves right, negative moves left
+
+  // Listen for rope updates from server
+  socket.on("updateRope", (newRope) => {
+    ropePosition = newRope;
     updateVisuals();
-    const players = Object.keys(data.players);
-    const myPlayer = players[0] === socket.id ? "left" : "right";
   });
 
-  socket.on("updateRope", (data) => {
-    ropePosition = data.ropePosition;
-    updateVisuals();
-  });
-
+  // Game over
   socket.on("gameOver", (data) => {
-    alert(data.winner + " wins!");
+    alert(`${data.winner} wins!`);
   });
-
-  
-
 
 });
