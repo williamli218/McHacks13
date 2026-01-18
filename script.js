@@ -415,11 +415,11 @@ const HARRY_POTTER_WORDS = [
   function resetGame() {
     gameOver = false;
 
-    // RESTORE CHARACTERS FIRST
+    currentTyped = "";
+
     charLeft.classList.remove("hidden");
     charRight.classList.remove("hidden");
 
-    // Hide explosions
     explosionLeft.classList.add("hidden");
     explosionRight.classList.add("hidden");
 
