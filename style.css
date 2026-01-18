@@ -586,3 +586,12 @@ button:hover::after {
 #menu button {
   animation-delay: 1s;
 }
+
+#countdown {
+  display: none;
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  
+}
