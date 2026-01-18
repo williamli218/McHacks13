@@ -245,13 +245,15 @@ button:hover::after {
   background-position: bottom center;
   image-rendering: pixelated;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: hidden; /*what happens when content is bigger than container*/
   border: 2px solid #444;
 }
 
 
 
 /* Characters */
+
+/* Player character */
 #char-left {
   position: absolute;
   bottom: 10px;
@@ -260,6 +262,7 @@ button:hover::after {
   z-index: 3;
 }
 
+/* Computer character */
 #char-right {
   position: absolute;
   bottom: 10px;
@@ -268,6 +271,7 @@ button:hover::after {
   z-index: 3;
 }
 
+/* Characters before spellcasting */
 #char-left-no-spell {
   position: absolute;
   bottom: 10px;
@@ -275,6 +279,8 @@ button:hover::after {
   height: 100px; /* Adjust to sprite size */
   z-index: 3;
 }
+
+/* Computer character before spellcasting */
 #char-right-no-spell {
   position: absolute;
   bottom: 10px;
@@ -283,11 +289,13 @@ button:hover::after {
   z-index: 3;
 }
 
+
+/*So that we do not see the characters winning yet, it is a class associated to winning poses*/
 .hidden {
   display: none;
 }
 
-/* Explosion */
+/* Explosion, animation that happens when a spell touches a character, so when a game ends */
 .explosion {
   position: absolute;
   bottom: 0;
@@ -298,7 +306,7 @@ button:hover::after {
   pointer-events: none;
 }
 
-/* Position over characters */
+/* Explosion positions */
 #explosion-left {
   left: 10px;   /* same as charLeft */
 }
@@ -307,9 +315,7 @@ button:hover::after {
   right: 10px;  /* same as charRight */
 }
 
-.hidden {
-  display: none;
-}
+
 
 /* Win Animations Positioning */
 .win-anim {
