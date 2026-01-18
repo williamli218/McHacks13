@@ -56,8 +56,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const PLAYER_PULL = 1.875; // pixels per correct word
   const DIFFICULTY_SETTINGS = {
     easy:   { speed: 600, computerPull: 0.3125 },
-    medium: { speed: 450, computerPull: 0.625 },
-    hard:   { speed: 300, computerPull: 1.25 }
+    medium: { speed: 500, computerPull: 0.625 },
+    hard:   { speed: 400, computerPull: 1 }
   };
 
 
