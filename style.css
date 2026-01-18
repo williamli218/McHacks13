@@ -222,7 +222,7 @@ p.difficulty strong {
 
 /* --- Letter Styles --- */
 .correct {
-  color: green;
+  color: rgb(41, 141, 207);
 }
 
 .incorrect {
@@ -230,7 +230,7 @@ p.difficulty strong {
 }
 
 .remaining {
-  color: black;
+  color: white;
 }
 
 /* --- Cursor --- */
