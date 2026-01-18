@@ -376,8 +376,8 @@ button:hover::after {
   font-weight: bold;
   white-space: nowrap;    /* prevent wrapping */
   overflow-x: auto;       /* allow horizontal scroll if needed */
-  margin: 5px 0;
-  display: inline-block;  /* important for centering */
+  margin: 5px auto;
+  display: block;  /* important for centering */
   text-align: center;
   line-height: 1.4;
   max-width: 100%;        /* don't exceed container width */

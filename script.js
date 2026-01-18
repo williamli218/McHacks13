@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("typingInput");
   const result = document.getElementById("result");
   const menu = document.getElementById("menu");
-  const startBtn = document.getElementById("startBtn");
+  const startBtn = document.getElementById("start-btn");
   const gameContainer = document.getElementById("gameContainer");
   const wordsRow = document.getElementById("wordsRow");
 
