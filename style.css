@@ -1,16 +1,20 @@
+/*Harry Potter Font*/
 @font-face {
     font-family: "HarryP";
     src: url("harry_p/HARRYP__.ttf") format("truetype");
 }
 
+/* Global Styles */
 body, button {
   font-family: "HarryP", Arial, sans-serif;
 }
 
+/* Fallback font for words and input */
 #currentWord, #upcomingWords, #typing-input {
     font-family: "Times New Roman", sans-serif; /* fallback / readable font */
 }
 
+/* Text shadow for better visibility */
 body, h1, h2, h3, p, label {
   color: #fff;
   text-shadow:
@@ -19,6 +23,7 @@ body, h1, h2, h3, p, label {
     0 0 20px rgba(0,0,0,0.6);
 }
 
+/* Body styles */
 body {
   margin: 0;
   height: 100vh;
@@ -34,6 +39,7 @@ body {
   justify-content: center;
 }
 
+/* Title styles */
 h1 {
   position: fixed;
   top: 0;
@@ -57,7 +63,7 @@ h1 {
   z-index: 1000;
 }
 
-/* Menu: basic settingn for further customization */
+/* Menu: basic settinng for further customization */
 #menu {
   text-align: center;
   font-size: 30px;
@@ -91,6 +97,7 @@ p.difficulty {
   transition: transform 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
 }
 
+/*Hover effect for difficulties*/
 .option span:hover {
   color: #FFD700;
   text-shadow:
@@ -99,6 +106,7 @@ p.difficulty {
     0 0 12px #FFD700;
 }
 
+/*Difficulty selection effect*/
 .option input[type="radio"]:checked + span {
   color: #FFD700;
   transform: scale(1.12) !important;
@@ -145,6 +153,7 @@ p.wordset {
   transition: transform 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
 }
 
+/*Hover effect for wordset options*/
 .wordset-option span:hover {
   color: #FFD700;
   text-shadow:
@@ -153,6 +162,7 @@ p.wordset {
     0 0 12px #FFD700;
 }
 
+/*Wordset selection effect*/
 .wordset-option input[type="radio"]:checked + span {
   color: #FFD700;
   transform: scale(1.12) !important;
