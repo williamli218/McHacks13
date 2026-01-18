@@ -392,5 +392,3 @@ const HARRY_POTTER_WORDS = [
 
 
 });
-
-
