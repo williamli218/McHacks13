@@ -28,6 +28,8 @@ guessing how well they are doing — the battlefield itself shows it.
 ## 2. Core Gameplay Loop
 
 1. The player selects a **difficulty level** and **word set**
+<img width="1919" height="1199" alt="image" src="https://github.com/user-attachments/assets/791e285e-debf-4243-87c3-d8cb44a734c3" />
+
 2. A short countdown prepares both sides for battle
 3. Both characters begin casting spells
 4. The player types words and submits them using the **space bar**
