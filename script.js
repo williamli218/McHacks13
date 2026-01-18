@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
   // --- DOM elements ---
-  const input = document.getElementById("typingInput");
+  const input = document.getElementById("typing-input");
   const result = document.getElementById("result");
   const menu = document.getElementById("menu");
   const startBtn = document.getElementById("start-btn");
@@ -12,9 +12,9 @@ window.addEventListener("DOMContentLoaded", () => {
   const clashPoint = document.getElementById("clash-point");
 
   const countdownEl = document.getElementById("countdown");
-  const endButtons = document.getElementById("endButtons");
-  const mainMenuBtn = document.getElementById("mainMenuBtn");
-  const playAgainBtn = document.getElementById("playAgainBtn");
+  const endButtons = document.getElementById("end-buttons");
+  const mainMenuBtn = document.getElementById("main-menu-btn");
+  const playAgainBtn = document.getElementById("play-again-btn");
 
   const explosionLeft = document.getElementById("explosion-left");
   const explosionRight = document.getElementById("explosion-right");
