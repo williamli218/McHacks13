@@ -75,6 +75,11 @@ p.difficulty {
   margin-bottom: 40px;
 }
 
+/*remove the dot before the option*/
+.option input[type="radio"] {
+  display: none;
+}
+
 /*Display different difficulties when unselected*/
 .option span {
   display: inline-block;
@@ -105,7 +110,8 @@ p.difficulty {
 }
 
 /*Position and style wordset header*/
-p.wordset {text-align: center;
+p.wordset {
+  text-align: center;
   font-size: 50px;                 
   margin-top: 10px;                
   margin-bottom: 30px;         
@@ -123,6 +129,10 @@ p.wordset {text-align: center;
   left: 30px; /* fine-tune */
 }
 
+/*remove the dot before the bank of words options*/
+.wordset-option input[type="radio"] {
+  display: none;
+}
 
 /*Display two different banks of words*/
 .wordset-option span {
@@ -194,13 +204,14 @@ button::after {
   transition: all 0.3s ease;
 }
 
-/* Hover animationi of glowing */
+/* Hover animation of glowing */
 button:hover::after {
   opacity: 1;
   filter: blur(18px);
   animation: pulseGlow 1.2s infinite alternate;
 }
 
+/*Start button customizer*/
 #menu button {
   margin-top: 20px;
   font-size: 28px;        /* bigger text */
